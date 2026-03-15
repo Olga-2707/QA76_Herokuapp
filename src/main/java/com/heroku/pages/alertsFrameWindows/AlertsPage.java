@@ -1,4 +1,4 @@
-package com.heroku.pages.alerts;
+package com.heroku.pages.alertsFrameWindows;
 
 import com.heroku.core.BasePage;
 import org.junit.jupiter.api.Assertions;

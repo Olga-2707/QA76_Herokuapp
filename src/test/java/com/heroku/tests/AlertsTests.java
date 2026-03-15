@@ -2,7 +2,7 @@ package com.heroku.tests;
 
 import com.heroku.core.TestBase;
 import com.heroku.pages.HomePage;
-import com.heroku.pages.alerts.AlertsPage;
+import com.heroku.pages.alertsFrameWindows.AlertsPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -27,7 +27,7 @@ public class AlertsTests extends TestBase {
         homePage.selectJSAlerts();
         alerts.clickOnJSConfirmButton()
                 .selectResult("Отмена") //для положительного ОК
-                .verifyResult("Cancel");//для полодительного Ok
+                .verifyResult("Cancel");//для положительного Ok
     }
 
     @Test
@@ -37,4 +37,6 @@ public class AlertsTests extends TestBase {
                 .sendMessageToPrompt("Hello!!")
                 .verifyMessage("Hello!!");
     }
+
+
 }
