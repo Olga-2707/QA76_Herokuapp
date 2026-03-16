@@ -29,7 +29,7 @@ public class FramePage extends BasePage {
     @FindBy(id = "tinymce")
     WebElement iframeText;
     public FramePage verifyIframeByTitle(String text) {
-        Assertions.assertTrue(iframe.getText().contains(text));
+        Assertions.assertTrue(iframeText.getText().contains(text));
         return this;
     }
 

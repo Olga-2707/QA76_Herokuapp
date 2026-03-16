@@ -4,6 +4,7 @@ import com.heroku.core.BasePage;
 import com.heroku.pages.alertsFrameWindows.AlertsPage;
 import com.heroku.pages.alertsFrameWindows.FramePage;
 import com.heroku.pages.alertsFrameWindows.MultiplayWindows;
+import com.heroku.pages.elements.ContextMenuPage;
 import com.heroku.pages.widgets.DragAndDrop;
 import com.heroku.pages.widgets.Dropdown;
 import com.heroku.pages.widgets.HoversPage;
@@ -68,5 +69,12 @@ public class HomePage extends BasePage {
     public HoversPage selectHovers() {
         click(hoversPage);
         return new HoversPage(driver);
+    }
+
+    @FindBy(xpath = "//a[@href='/context_menu']")
+    WebElement contextMenu;
+    public ContextMenuPage selectContextMenu() {
+        click(contextMenu);
+        return new ContextMenuPage(driver);
     }
 }

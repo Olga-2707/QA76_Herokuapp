@@ -1,5 +1,6 @@
 package com.heroku.core;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,4 +18,10 @@ public class TestBase {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
+    @AfterEach()
+    public void setUp(){
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }

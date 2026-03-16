@@ -5,14 +5,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
+import java.awt.*;
+
 public class BasePage {
     protected WebDriver driver;
     public static Actions actions;
+
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         actions = new Actions(driver);
+
     }
 
     public void click(WebElement element){
