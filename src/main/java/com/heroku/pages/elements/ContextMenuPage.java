@@ -35,6 +35,10 @@ public class ContextMenuPage extends BasePage {
 
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
+
+//        actions.sendKeys(Keys.ARROW_DOWN).perform();
+//        actions.sendKeys(Keys.ENTER).perform();
+//        driver.navigate().back();
         return this;
     }
 

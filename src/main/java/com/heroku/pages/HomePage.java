@@ -5,6 +5,7 @@ import com.heroku.pages.alertsFrameWindows.AlertsPage;
 import com.heroku.pages.alertsFrameWindows.FramePage;
 import com.heroku.pages.alertsFrameWindows.MultiplayWindows;
 import com.heroku.pages.elements.ContextMenuPage;
+import com.heroku.pages.uploadPage.UploadFile;
 import com.heroku.pages.widgets.DragAndDrop;
 import com.heroku.pages.widgets.Dropdown;
 import com.heroku.pages.widgets.HoversPage;
@@ -76,5 +77,12 @@ public class HomePage extends BasePage {
     public ContextMenuPage selectContextMenu() {
         click(contextMenu);
         return new ContextMenuPage(driver);
+    }
+
+    @FindBy(xpath = "//a[@href='/upload']")
+    WebElement upload;
+    public UploadFile selectFileUpload() {
+        click(upload);
+        return new UploadFile(driver);
     }
 }
